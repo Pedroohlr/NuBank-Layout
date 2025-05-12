@@ -9,5 +9,6 @@ export interface User {
     'foto_usuario': string;
     saldo: number;
    'limite_cartao': number;
+   'limite-emprestimo': number;
     'fatura_atual': number;
 }

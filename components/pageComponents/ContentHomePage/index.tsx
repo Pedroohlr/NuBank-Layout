@@ -12,10 +12,10 @@ export default function ContentHomePage(){
     const [todos, setTodos] = useState<Record<string, User>>({})
     const [user, setUser] = useState<User | null>()
 
-    const atalhos = [
+    const atalhos:atalho = [
         {name:"Área Pix e Transferir", mensage:"", icon: <IconProp src="icons/pix-svgrepo-com.svg" size={30} />},
         {name:"Pagar", mensage:"", icon: <IconProp src="icons/barcode-svgrepo-com.svg" size={30} />},
-        {name:"Pegar Emprestado", mensage:"R$72.000" , icon: <IconProp src="icons/hand-money-svgrepo-com.svg" size={30} />},
+        {name:"Pegar Emprestado", mensage:user?.["limite-emprestimo"] , icon: <IconProp src="icons/hand-money-svgrepo-com.svg" size={30} />},
         {name:"Converte Limite", mensage:"", icon: <IconProp src="icons/dollar-svgrepo-com.svg" size={30} />},
         {name:"Recarga de celular", mensage:"", icon: <IconProp src="icons/device-mobile-svgrepo-com.svg" size={30} />},
         {name:"Caixinhas e Investir", mensage:"", icon: <IconProp src="icons/dollar-piggy-bank-svgrepo-com.svg" size={30} />}
@@ -66,7 +66,16 @@ export default function ContentHomePage(){
                                 {
                                 atalho.mensage === "" 
                                 ? null 
-                                : <span className="bg-primary p-1 text-[10px] rounded-[4px] fixed mt-5">{atalho.mensage}</span>
+                                : <span className="bg-primary p-1 text-[10px] rounded-[4px] fixed mt-5">{
+                                    user == null ? (
+                                    "Carregando..."
+                                ) : Number.isNaN(atalhos.mensage) ? (
+                                    "-"
+                                ) : (
+                                    formatNumber(user.saldo, 'pt-BR', {style:"currency", currency:"BRL"})
+                                )
+                                    }
+                                    </span>
                                 }
                                 <p className="text-center text-[12px] mt-2.5">
                                     {atalho.name}    

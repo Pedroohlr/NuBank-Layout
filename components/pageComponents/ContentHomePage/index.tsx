@@ -1,21 +1,21 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { User } from "@/types/Iuser";
 import { getUser, getUsers } from "@/services/users";
 import { formatNumber } from "@/utils/numberFormatter";
-import { ChevronRight, Pickaxe } from "lucide-react";
+import { ChevronRight, Currency } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { IconProp } from "@/components/ui/IconProp";
 
 export default function ContentHomePage(){
     const [todos, setTodos] = useState<Record<string, User>>({})
-    const [user, setUser] = useState<User | null>(null)
+    const [user, setUser] = useState<User | null>()
 
     const atalhos = [
         {name:"Área Pix e Transferir", mensage:"", icon: <IconProp src="icons/pix-svgrepo-com.svg" size={30} />},
         {name:"Pagar", mensage:"", icon: <IconProp src="icons/barcode-svgrepo-com.svg" size={30} />},
-        {name:"Pegar Emprestado", mensage:"R$7.000" , icon: <IconProp src="icons/hand-money-svgrepo-com.svg" size={30} />},
+        {name:"Pegar Emprestado", mensage:"R$72.000" , icon: <IconProp src="icons/hand-money-svgrepo-com.svg" size={30} />},
         {name:"Converte Limite", mensage:"", icon: <IconProp src="icons/dollar-svgrepo-com.svg" size={30} />},
         {name:"Recarga de celular", mensage:"", icon: <IconProp src="icons/device-mobile-svgrepo-com.svg" size={30} />},
         {name:"Caixinhas e Investir", mensage:"", icon: <IconProp src="icons/dollar-piggy-bank-svgrepo-com.svg" size={30} />}
@@ -26,6 +26,8 @@ export default function ContentHomePage(){
         getUser(1).then(u => setUser(u))
     }, [])
     
+    console.log(user)
+
     return(
         <div className="">
 
@@ -36,7 +38,15 @@ export default function ContentHomePage(){
                 </span>
 
                 <span className="text-white text-[18px]">
-                    {formatNumber(34343, 'pt-BR', {style:"currency", currency: "BRL"})}
+                    {
+                        user == null ? (
+                            "Carregando..."
+                        ) : Number.isNaN(user.saldo) ? (
+                            "-"
+                        ) : (
+                            formatNumber(user.saldo, 'pt-BR', {style:"currency", currency:"BRL"})
+                        )
+                    }
                 </span>
             </div>
 

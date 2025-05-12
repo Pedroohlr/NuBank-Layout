@@ -8,7 +8,8 @@ export function IconProp({ size, src, alt="", className = '' }: IconProps) {
         <img 
         src={imageSrc} 
         alt={alt}
-        className={`object-contain w-[${size}px] h-[${size}px] ${className}`}
+        style={{ width: size, height: size }}
+        className={`object-contain ${className}`}
          />
     )
 }

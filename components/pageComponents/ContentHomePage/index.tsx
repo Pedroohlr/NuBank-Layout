@@ -6,18 +6,19 @@ import { getUser, getUsers } from "@/services/users";
 import { formatNumber } from "@/utils/numberFormatter";
 import { ChevronRight, Pickaxe } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { IconProp } from "@/components/ui/IconProp";
 
 export default function ContentHomePage(){
     const [todos, setTodos] = useState<Record<string, User>>({})
     const [user, setUser] = useState<User | null>(null)
 
     const atalhos = [
-        {name:"Área Pix e Transferir", icon: <Pickaxe size={30} />},
-        {name:"Pagar", icon: <Pickaxe size={30} />},
-        {name:"Pegar Emprestado", icon: <Pickaxe size={30} />},
-        {name:"Converte Limite", icon: <Pickaxe size={30} />},
-        {name:"Recarga de celular", icon: <Pickaxe size={30} />},
-        {name:"Caixinhas e Investir", icon: <Pickaxe size={30} />}
+        {name:"Área Pix e Transferir", mensage:"", icon: <IconProp src="icons/pix-svgrepo-com.svg" size={30} />},
+        {name:"Pagar", mensage:"", icon: <IconProp src="icons/barcode-svgrepo-com.svg" size={30} />},
+        {name:"Pegar Emprestado", mensage:"R$7.000" , icon: <IconProp src="icons/hand-money-svgrepo-com.svg" size={30} />},
+        {name:"Converte Limite", mensage:"", icon: <IconProp src="icons/dollar-svgrepo-com.svg" size={30} />},
+        {name:"Recarga de celular", mensage:"", icon: <IconProp src="icons/device-mobile-svgrepo-com.svg" size={30} />},
+        {name:"Caixinhas e Investir", mensage:"", icon: <IconProp src="icons/dollar-piggy-bank-svgrepo-com.svg" size={30} />}
     ];
 
     useEffect(() => {
@@ -43,7 +44,7 @@ export default function ContentHomePage(){
                 opts={{
                     align: "start",
                 }}
-                className="w-full max-w-sm ml-4"
+                className="w-full max-w-sm"
             >
                 <CarouselContent>
                     {atalhos.map((atalho, index) => (
@@ -52,7 +53,12 @@ export default function ContentHomePage(){
                                 <span className="bg-[#222222] p-5 rounded-full">
                                     {atalho.icon}
                                 </span>
-                                <p className="text-center text-[12px]">
+                                {
+                                atalho.mensage === "" 
+                                ? null 
+                                : <span className="bg-primary p-1 text-[10px] rounded-[4px] fixed mt-5">{atalho.mensage}</span>
+                                }
+                                <p className="text-center text-[12px] mt-2.5">
                                     {atalho.name}    
                                 </p>
                             </div>

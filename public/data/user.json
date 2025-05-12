@@ -1,0 +1,15 @@
+{
+    "user1":{
+        "id": 1,
+        "nome_usuario": "Pedro Henrique",
+        "cpf" : "44734237000",
+        "senha" : "pedro1234",
+        "agencia": "0001",
+        "conta": "34234323-4",
+        "banco": "0242",
+        "foto_usuario": "https://avatars.githubusercontent.com/u/138743400?v=4",
+        "saldo": 950.00,
+        "limite-cartao": 2000,
+        "fatura-atual": 728.99
+    }
+}

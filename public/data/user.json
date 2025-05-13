@@ -10,7 +10,7 @@
         "foto_usuario": "https://avatars.githubusercontent.com/u/138743400?v=4",
         "saldo": 18920.99,
         "limite-cartao": 2000,
-        "limite-emprestimo": 72000,
+        "limite-emprestimo": 100000,
         "fatura-atual": 728.99
     }
 }

@@ -106,7 +106,7 @@ export default function ContentHomePage() {
         </CarouselContent>
       </Carousel>
 
-      <div className="m-8 bg-[#222] rounded-2xl flex flex-row p-3 items-center justify-start gap-4 text-white">
+      <div className="m-8 h-15 bg-[#222] rounded-2xl flex flex-row p-3 items-center justify-start gap-4 text-white">
           <CreditCard />
           Meus Cartões
       </div>

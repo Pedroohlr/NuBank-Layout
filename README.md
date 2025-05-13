@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NuBank-layout
 
-## Getting Started
+> Projeto de clonagem do layout frontend do NuBank para aprendizado prático em Next.js, Tailwind CSS e shadcn/ui.
 
-First, run the development server:
+## 📝 Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto tem como objetivo replicar o design e a experiência de usuário do frontend do NuBank, utilizando:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Next.js**: Framework React para SSR e geração de sites estáticos.
+* **Tailwind CSS**: Biblioteca de utilitários para estilização rápida.
+* **shadcn/ui**: Conjunto de componentes baseados em Radix UI e Tailwind.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A ideia é praticar a construção de **componentes estáticos** (cards, botões, layouts) e **componentes dinâmicos** (menus colapsáveis, modais, sliders), bem como estruturar o projeto seguindo boas práticas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Tecnologias
 
-## Learn More
+* [Next.js](https://nextjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [shadcn/ui](https://ui.shadcn.com/)
+* [TypeScript](https://www.typescriptlang.org/) 
+## 🔨 Instalação
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone o repositório:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/Pedroohlr/NuBank-layout.git
+   cd NuBank-layout
+   ```
+2. Instale as dependências:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   # ou yarn install
+   ```
 
-## Deploy on Vercel
+## 🛠️ Scripts disponíveis
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* `npx next dev --turbopack` — Inicia o servidor de desenvolvimento em [http://localhost:3000](http://localhost:3000) (com o turbopack).
+* `npx next build` — Gera versão de produção.
+* `npx next start` — Executa a versão de produção.
+* `npx next format` — Formata o código com Prettier.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Funcionalidades
+
+* Layout responsivo, inspirado no NuBank
+* Barra de navegação fixa com menu colapsável
+* Cards de saldo e transações
+* Modal de detalhes de conta
+* Componentes reutilizáveis com shadcn/ui
+
+## 💡 Como contribuir
+
+1. Faça um *fork* do repositório.
+2. Crie uma branch com sua feature: `git checkout -b feature/nova-coisa`
+3. Faça alterações e commit: `git commit -m 'feat: adiciona nova funcionalidade'`
+4. Envie para sua branch remota: `git push origin feature/nova-coisa`
+5. Abra um *Pull Request* descrevendo suas mudanças.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com ❤️ para aprender e praticar Next.js, Tailwind e shadcn/ui.

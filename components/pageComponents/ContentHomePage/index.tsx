@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect } from "react";
 import { User } from "@/types/Iuser";
 import { getUser, getUsers } from "@/services/users";
 import { formatNumber } from "@/utils/numberFormatter";
@@ -11,6 +11,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { IconProp } from "@/components/ui/IconProp";
+import { Card } from "@/components/ui/card";
 
 export default function ContentHomePage() {
   const [todos, setTodos] = useState<Record<string, User>>({});
@@ -62,8 +63,8 @@ export default function ContentHomePage() {
   }, []);
 
   return (
-    <div className="">
-      <div className="p-8">
+    <div className="flex flex-col gap-4">
+      <div className="ml-8 mr-8 mt-8">
         <span className="text-white flex justify-between">
           Saldo em conta
           <ChevronRight />
@@ -106,10 +107,14 @@ export default function ContentHomePage() {
         </CarouselContent>
       </Carousel>
 
-      <div className="m-8 h-15 bg-[#222] rounded-2xl flex flex-row p-3 items-center justify-start gap-4 text-white">
+      <div className="ml-8 mr-8 h-15 bg-[#222] rounded-2xl flex flex-row p-3 items-center justify-start gap-4 text-white">
           <CreditCard />
           Meus Cartões
       </div>
+
+          <Card>
+            
+          </Card>
 
     </div>
   );

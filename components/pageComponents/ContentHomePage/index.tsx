@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import { IconProp } from "@/components/ui/IconProp";
 import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 export default function ContentHomePage() {
     const [todos, setTodos] = useState<Record<string, User>>({});
@@ -135,10 +136,10 @@ export default function ContentHomePage() {
             </div>
 
             <Carousel
-            opts={{
-                align: "start",
-            }}
-            className="w-full max-w-sm"
+                opts={{
+                    align: "start",
+                }}
+                className="w-full max-w-sm"
             >
                 <CarouselContent>
                     {banners.map((banner, index) => (
@@ -155,12 +156,29 @@ export default function ContentHomePage() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                
-            </Carousel>        
 
-            <div className=" h-40">
+            </Carousel>
 
-            </div>
+            <Separator className="my-4 bg-[#212121]" />
+
+            <div className="ml-8 mr-8 text-white flex flex-col gap-3">
+                <span className="text-white flex justify-between">
+                    Cartão de crédito
+                    <ChevronRight />
+                </span>
+
+                    <span className="flex flex-col">
+                        <p className="text-[12px] text-gray-300">Fatura atual</p>
+                        <p className="text-[16px]">R$ 588,28</p>
+                    </span>
+                    <span>
+                        <p className="text-[10px] text-gray-400">Limite disponível de R$ 831,68</p>
+                    </span>
+            </div>            
+
+                    <div className="h-20">
+
+                    </div>
 
         </div>
     );

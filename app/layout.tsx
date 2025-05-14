@@ -11,7 +11,6 @@ const graphik = localFont({
     { path: "../public/fonts/Graphik-Medium.ttf", weight: "500", style: "normal" },
     { path: "../public/fonts/Graphik-Semibold.ttf", weight: "600", style: "normal" },
     { path: "../public/fonts/Graphik-Bold.ttf",     weight: "700", style: "normal" },
-    // ...
   ],
 });
 
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${graphik.variable} bg-primary`}>
+      <body className={`${graphik.variable} bg-gradient-to-bl from-primary  to-[#000000] min-h-screen bg-no-repeat`}>
         <main>
           {children}
           <AppBar />

@@ -22,7 +22,7 @@ export default function AppBar(){
                     <Link key={key} href={href} passHref>
                         <div
                         className={`
-                            p-2 rounded-full
+                            p-2 rounded-2xl
                             ${ativo
                                 ? 'bg-primary text-primary-foreground' /**Estilo do item ativo */
                                 : 'text-white'

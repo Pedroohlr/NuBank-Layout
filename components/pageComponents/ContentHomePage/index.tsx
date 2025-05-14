@@ -25,7 +25,7 @@ export default function ContentHomePage() {
       icon: <IconProp src="iconsBanner/cart-2-svgrepo-com (1).svg" size={30} />,
     },
     {
-      title: "facilite seus planos futuros: guarde dinheiro nas caixinhas",
+      title: "Facilite seus planos futuros: guarde dinheiro nas caixinhas",
       icon: <IconProp src="iconsBanner/diploma-verified-svgrepo-com.svg" size={30} />,
     },
     {
@@ -117,7 +117,7 @@ export default function ContentHomePage() {
           {atalhos.map((atalho, index) => (
             <CarouselItem key={index} className="basis-1/5">
               <div className="p-1 text-white  w-25 flex flex-col items-center justify-center">
-                <span className="bg-[#222222] p-5 rounded-full">
+                <span className="bg-[#222222] p-5 rounded-2xl">
                   {atalho.icon}
                 </span>
                 {atalho.mensage !== "" && (
@@ -151,7 +151,7 @@ export default function ContentHomePage() {
                   {banner.title}
                 </div>
 
-                <div className="bg-[#e6e6e6] rounded-full w-[50px] h-[50px] flex p-3 items-center justify-center">
+                <div className="bg-[#e6e6e6] rounded-2xl w-[50px] h-[50px] flex p-3 items-center justify-center">
                   {banner.icon}
                 </div>
               </Card>

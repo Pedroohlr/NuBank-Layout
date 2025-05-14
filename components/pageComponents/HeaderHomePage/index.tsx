@@ -35,7 +35,7 @@ export default function HeaderHomePage() {
                     <IconProp src="confetti-svgrepo-com.svg" size={50}/>
                     <div>
                         <p className="text-[14px] font-[400] text-primary">PepsBank esta de cara nova!</p>
-                        <p className="text-[12px] text-white bg-primary w-fit pl-2 pr-2 rounded-2xl">Ver oque mudou</p>
+                        <p className="text-[12px] text-white bg-primary w-fit pl-2 pr-2 rounded-2xl">Veja o que mudou</p>
                     </div>
                 </div>
                 <EllipsisVertical className="text-primary"/>

@@ -3,9 +3,9 @@ import HeaderHomePage from "@/components/pageComponents/HeaderHomePage";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeaderHomePage />
       <ContentHomePage />
-    </div>
+    </>
   );
 }

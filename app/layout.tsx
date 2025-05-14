@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import AppBar from "@/components/AppBar";
+import localFont from "next/font/local";
 
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "600", "700"]
+const graphik = localFont({
+  variable: "--font-graphik",
+  display: "swap",
+  src: [
+    { path: "../public/fonts/Graphik-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/Graphik-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../public/fonts/Graphik-Semibold.ttf", weight: "600", style: "normal" },
+    { path: "../public/fonts/Graphik-Bold.ttf",     weight: "700", style: "normal" },
+    // ...
+  ],
 });
 
 export const metadata: Metadata = {
@@ -21,8 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={jakarta.className}>
-        <main className="bg-primary">
+      <body className={`${graphik.variable} bg-primary`}>
+        <main>
           {children}
           <AppBar />
         </main>

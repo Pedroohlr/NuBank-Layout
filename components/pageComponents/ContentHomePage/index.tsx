@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import { IconProp } from "@/components/ui/IconProp";
 import { Card } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
 import { Separator } from "@/components/ui/separator";
 
 export default function ContentHomePage() {
@@ -87,14 +88,14 @@ export default function ContentHomePage() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 bg-background">
-      <div className="ml-8 mr-8 mt-8">
-        <span className="text-white flex justify-between">
+    <Container>
+      <div className="ml-8 mr-8 mt-6">
+        <span className="text-white flex justify-between text-[20px] font-[500]">
           Saldo em conta
           <ChevronRight />
         </span>
 
-        <span className="text-white text-[18px]">
+        <span className="text-white font-[400]">
           {user == null
             ? "Carregando..."
             : Number.isNaN(user.saldo)
@@ -114,7 +115,7 @@ export default function ContentHomePage() {
       >
         <CarouselContent>
           {atalhos.map((atalho, index) => (
-            <CarouselItem key={index} className="basis-1/4">
+            <CarouselItem key={index} className="basis-1/5">
               <div className="p-1 text-white  w-25 flex flex-col items-center justify-center">
                 <span className="bg-[#222222] p-5 rounded-full">
                   {atalho.icon}
@@ -124,7 +125,7 @@ export default function ContentHomePage() {
                     {atalho.mensage}
                   </span>
                 )}
-                <p className="text-center text-[12px] mt-2.5 font-[600]">{atalho.name}</p>
+                <p className="text-center text-[14px] mt-2.5 font-[500]">{atalho.name}</p>
               </div>
             </CarouselItem>
           ))}
@@ -150,7 +151,7 @@ export default function ContentHomePage() {
                   {banner.title}
                 </div>
 
-                <div className="bg-black rounded-full w-[16%] flex p-3 items-center justify-center">
+                <div className="bg-black rounded-full w-[50px] h-[50px] flex p-3 items-center justify-center">
                   {banner.icon}
                 </div>
               </Card>
@@ -162,14 +163,14 @@ export default function ContentHomePage() {
       <Separator className="my-4 bg-[#212121]" />
 
       <div className="ml-8 mr-8 text-white flex flex-col gap-3">
-        <span className="text-white flex justify-between">
+        <span className="text-white flex font-[500] text-[20px] justify-between">
           Cartão de crédito
           <ChevronRight />
         </span>
 
         <span className="flex flex-col">
-          <p className="text-[14px] text-gray-300">Fatura atual</p>
-          <p className="text-[16px]">R$ 588,28</p>
+          <p className="text-[16px] text-gray-300">Fatura atual</p>
+          <p className="text-[20px] text-white font-[500]">R$ 588,28</p>
         </span>
         <span>
           <p className="text-[14px] text-gray-400">
@@ -184,6 +185,6 @@ export default function ContentHomePage() {
       <div className="h-40"></div>
 
       
-    </div>
+    </Container>
   );
 }

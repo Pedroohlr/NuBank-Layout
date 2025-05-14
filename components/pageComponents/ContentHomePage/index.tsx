@@ -22,16 +22,16 @@ export default function ContentHomePage() {
   const banners = [
     {
       title: "Pague boletos no crédito em até 12x, direto pelo app",
-      icon: <IconProp src="iconsBanner/cart-2-svgrepo-com.svg" size={30} />,
+      icon: <IconProp src="iconsBanner/cart-2-svgrepo-com (1).svg" size={30} />,
     },
     {
       title: "facilite seus planos futuros: guarde dinheiro nas caixinhas",
-      icon: <IconProp src="iconsBanner/box-svgrepo-com.svg" size={30} />,
+      icon: <IconProp src="iconsBanner/diploma-verified-svgrepo-com.svg" size={30} />,
     },
     {
       title:
         "Aumente seu limite do cartão de credito hoje com o Nu Limite Garantido",
-      icon: <IconProp src="iconsBanner/logout-3-svgrepo-com.svg" size={30} />,
+      icon: <IconProp src="iconsBanner/donut-bitten-svgrepo-com.svg" size={30} />,
     },
   ];
 
@@ -151,7 +151,7 @@ export default function ContentHomePage() {
                   {banner.title}
                 </div>
 
-                <div className="bg-black rounded-full w-[50px] h-[50px] flex p-3 items-center justify-center">
+                <div className="bg-[#e6e6e6] rounded-full w-[50px] h-[50px] flex p-3 items-center justify-center">
                   {banner.icon}
                 </div>
               </Card>

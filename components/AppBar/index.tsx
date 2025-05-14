@@ -1,15 +1,17 @@
 'use client';
 
-import { ArrowRightLeft, BadgeDollarSign, ShoppingCart } from "lucide-react";
+import { CgArrowsExchangeAlt } from "react-icons/cg";
+import { LiaDollarSignSolid } from "react-icons/lia";
+import { CiCreditCard2 } from "react-icons/ci";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 export default function AppBar(){
     const pathname = usePathname()
     
     const itens = [
-        { href: '/', icon: <ArrowRightLeft size={30} />, key: '/home'},
-        { href: '/teste', icon: <BadgeDollarSign size={30} />, key: 'teste'},
-        { href: '/teste2', icon: <ShoppingCart size={30} />, key: 'teste2'},
+        { href: '/', icon: <CgArrowsExchangeAlt  size={30} />, key: '/home'},
+        { href: '/teste', icon: <LiaDollarSignSolid  size={30} />, key: 'teste'},
+        { href: '/teste2', icon: <CiCreditCard2  size={30} />, key: 'teste2'},
     ]
     
     return(
@@ -22,7 +24,7 @@ export default function AppBar(){
                         className={`
                             p-2 rounded-full
                             ${ativo
-                                ? 'bg-[#360d4f] text-[#c585fa]' /**Estilo do item ativo */
+                                ? 'bg-primary text-primary-foreground' /**Estilo do item ativo */
                                 : 'text-white'
                             }
                             transition-colors

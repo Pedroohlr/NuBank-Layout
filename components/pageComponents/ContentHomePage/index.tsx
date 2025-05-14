@@ -124,7 +124,7 @@ export default function ContentHomePage() {
                     {atalho.mensage}
                   </span>
                 )}
-                <p className="text-center text-[12px] mt-2.5">{atalho.name}</p>
+                <p className="text-center text-[12px] mt-2.5 font-[600]">{atalho.name}</p>
               </div>
             </CarouselItem>
           ))}
